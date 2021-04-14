@@ -1,0 +1,64 @@
+{
+  "name": "ng-plugin",
+  "version": "8.214.2",
+  "description": "Angular Plugin Manager",
+  "private": true,
+  "scripts": {
+    "lint:manager": "ng lint --fix ng-plugin-manager",
+    "build:manager": "ng build ng-plugin-manager",
+    "lint:demo": "ng lint --fix ng-plugin-demo",
+    "build:demo": "ng build ng-plugin-demo",
+    "lint": "ng lint --fix ng-plugin",
+    "build": "ng build",
+    "dev": "ng serve"
+  },
+  "dependencies": {
+    "@angular/animations": "~8.2.14",
+    "@angular/cdk": "~8.2.3",
+    "@angular/common": "~8.2.14",
+    "@angular/compiler": "~8.2.14",
+    "@angular/core": "~8.2.14",
+    "@angular/forms": "~8.2.14",
+    "@angular/platform-browser": "~8.2.14",
+    "@angular/platform-browser-dynamic": "~8.2.14",
+    "@angular/router": "~8.2.14",
+    "core-js": "^3.9.0",
+    "rxjs": "^6.6.3",
+    "systemjs": "^6.8.3",
+    "tsickle": "^0.39.1",
+    "zone.js": "^0.11.4"
+  },
+  "devDependencies": {
+    "@angular-devkit/build-angular": "~0.803.25",
+    "@angular-devkit/build-ng-packagr": "~0.803.25",
+    "@angular/cli": "~8.3.25",
+    "@angular/compiler-cli": "~8.2.14",
+    "@commitlint/cli": "^8.3.5",
+    "@commitlint/config-conventional": "^8.3.4",
+    "@types/systemjs": "~6.1.0",
+    "codelyzer": "^5.2.2",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2",
+    "ng-packagr": "~5.7.1",
+    "prettier": "^2.0.5",
+    "ts-node": "^8.10.1",
+    "tslint": "^6.1.2",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "3.5.3"
+  },
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts}": [
+      "prettier --write",
+      "tslint --fix"
+    ],
+    "*.{scss,css,html,json}": [
+      "prettier --write"
+    ]
+  }
+}

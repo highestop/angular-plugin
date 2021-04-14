@@ -1,0 +1,15 @@
+{
+  "name": "ng-plugin-manager",
+  "version": "8.214.2",
+  "description": "Angular Plugin Manager",
+  "peerDependencies": {
+    "@angular/compiler": "~8.2.14",
+    "@angular/core": "~8.2.14",
+    "@angular/platform-browser": "^8.2.14",
+    "@angular/platform-browser-dynamic": "~8.2.14",
+    "@angular/router": "~8.2.14",
+    "core-js": "~2.6.11",
+    "rxjs": "~6.5.4",
+    "systemjs": "~6.2.2"
+  }
+}
